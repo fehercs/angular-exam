@@ -6,12 +6,15 @@ import {Pet} from "../models/pet.model";
 @Component({
   selector: 'app-animals',
   template: `
-    <div>
-      <div>
+    <div *ngFor="let animal of animals$ | async" [animal]="animal">
+      <div appColor [isCat]="animal.type === 1">
         <app-animal *ngFor="let animal of animals$ | async" [animal]="animal">
           <h4>{{ animal.name }}</h4>
+          <p>{{ animal.type }}</p>
+          <p> {{ animal.description | maxLength}}</p>
         </app-animal>
       </div>
+
     </div>
   `,
   styles: [
