@@ -16,18 +16,48 @@ A gyakorlati feladatoknál, amennyiben a project nem indul el, nem tudok rá pon
 ### Kérdések (30 pont)
 
 1) Mi az az SPA (Single Page Application)? **(2p)**
+    Az SPA egy olyan webes alkalmazás, melyben egyetlen html DOM generálódik, a szerveren, vagy kliensen futó kódból.
+    
 2) Miket nevezünk dekorátoroknak? Mondj rájuk legalább 3 példát. **(4p)**
+    Jelölések a kódban, melyek Anguláros funkciókra mutatnak
+    @Input
+    @ViewChild
+    @Output
+    
 3) Nevezz meg két-két struktúrális és attribútum direktívát! Mire használjuk őket? **(4p)**
+    *ngIf: elemek feltételes megjelenítése a DOM-ban
+    *ngFor: tömbök elemeinek megjelenítése a DOM-ban, anélkül, hogy egyenként kiírnánk őket
+    [ngStyle]: értékfüggő stílusok megadása az elemekre
+    [ngClass]: egész classok megadása a HTML-elemen
+    
 4) Milyen típusú adatok jeleníthetőek meg string interpoláció segítségével? Milyenek nem? **(2p)**
+    primitív adattípusok, Array, Object nem
+    
 5) Nevezz meg legalább 3 életciklust! Mire használjuk őket? **(3p)**
+    ngOnInit: az osztály példányosításakor, először, egyszer fut le, alap értékadásra, feliratkozásra használható
+    ngOnChanges: a példány bármilyen változásakor lefut, mezők figyelésére használható pl
+    ngOnDestroy: egy példány megszünésekor fut le, leiratkozások tipikus helye
+    
 6) Mit jelent a dependency injection? Angularban hogyan használjuk? **(2p)**
+    függőségek behúzása egy osztályba, routerek, servicek (...) használatakor alkalmazzuk
+    
 7) Abszolút vagy relatív elérési utat lehet használni a templaten a routerLink-nél? Miért? **(2p)**
+    a routerLinkben mindkét elérési út megfelelő
+    
 8) Abszolút vagy relatív elérési utat lehet használni a kódban a Router.navigate()-nél? Miért? **(2p)**
+    a Router.navigate relatív elérési utat vár
 9) Mik azok a guardok? Mire használjuk őket? **(2p)**
+    a guardokkal szabályozhatjuk az egyes útvonalak elérését a különböző kliens típusok számára
+    
 10) Mik azok a resolverek? Mire használjuk őket? **(2p)**
+    a resolverekkel több osztály számára is elérhető, fix módosításokat végezhetünk adatokon
+    
 11) Mik azok a pipeok? Mondj legalább két példát! **(2p)**
-12) Mik azok az interceptorok? Mire használjuk őket? **(2p)**
+    a string interpolációban módosíthatjuk a kiírt értékeket, pl uppercase, vagy formátum módosítás
+    
+12) Mik azok az interceptorok? Mire használjuk őket? **(2p)**    
 13) Mi a különbség a Subject és a BehaviorSubject között? **(1p)**
+    A subjectnejk nincs memóriája, csak a next() elemre lehet hivatkozni
 
 ### Gyakorlati feladatok (30 pont)
 A models mappában megtaláljátok a Pet model-t és a hozzá tartozó enumot. 
